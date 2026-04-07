@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="ff59cdee834c4710f1a9ad30ceaad3b7" label="Brunch Item" max_length="40" name="x_22750_brunch_coo_brunch_item" type="collection">
+        <element label="Gluten-free" max_length="40" name="is_gluten_free" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="Notes" max_length="1000" name="notes" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Quantity/Servings" max_length="100" name="quantity" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Brought by" mandatory="true" max_length="255" name="brought_by" type="string"/>
+        <element attributes="edge_encryption_enabled=true" display="true" label="Item Name" mandatory="true" max_length="255" name="item_name" type="string"/>
+        <element label="Vegan" max_length="40" name="is_vegan" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" label="Category" mandatory="true" max_length="40" name="category" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Cheese" sequence="2" value="cheese"/>
+                <element inactive_on_update="false" label="Dessert" sequence="6" value="dessert"/>
+                <element inactive_on_update="false" label="Bread" sequence="3" value="bread"/>
+                <element inactive_on_update="false" label="Other" sequence="7" value="other"/>
+                <element inactive_on_update="false" label="Appetizer" sequence="0" value="appetizer"/>
+                <element inactive_on_update="false" label="Savory pies, cakes or pizza" sequence="4" value="savory_pies_cakes_pizza"/>
+                <element inactive_on_update="false" label="Drinks" sequence="1" value="drinks"/>
+                <element inactive_on_update="false" label="Salad" sequence="5" value="salad"/>
+            </choice>
+        </element>
+        <element attributes="encode_utf8=false" label="Brought by" mandatory="true" max_length="32" name="contributor" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Description" max_length="500" name="description" type="string"/>
+        <element label="Vegetarian" max_length="40" name="is_vegetarian" type="boolean"/>
+        <element label="Halal" max_length="40" name="is_halal" type="boolean"/>
+    </element>
+</database>
